@@ -1,17 +1,13 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
 import { Routes, Route } from 'react-router-dom'
-import FrontLayout from './components/FrontLayout'
-// import Navbar from './components/FrontNav.tsx'
-import Home from './components/Home.tsx'
-import About from './components/About.tsx'
-import Contact from './components/Contact.tsx'
+
+import FrontLayout from './components/FrontLayout/FrontLayout'
+import Home from './components/Home/Home'
+import About from './components/About/About'
+import Contact from './components/Contact/Contact'
 
 function App () {
   return (
     <>
-      {/* <Navbar /> */}
-
       <Routes>
         <Route element={<FrontLayout />}> {/* Puts navbar on these pages */}
           <Route path='/' element={<Home />} />

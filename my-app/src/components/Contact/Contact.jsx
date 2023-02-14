@@ -1,6 +1,4 @@
 import React from "react"
-import { ReactDOM } from "react"
-// import '../css/contact.css'
 
 function Contact () {
   return (
