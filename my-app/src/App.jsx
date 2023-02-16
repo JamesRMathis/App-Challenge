@@ -9,12 +9,10 @@ function App () {
   return (
     <>
       <Routes>
-        <Route element={<FrontLayout />}> {/* Puts navbar on these pages */}
+        <Route element={<FrontLayout />}>
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
         </Route>
-
-        <Route path='/contact' element={<Contact />} /> {/* contact shouldnt have body padding */}
       </Routes>
     </>
   )

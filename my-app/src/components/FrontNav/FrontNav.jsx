@@ -6,10 +6,17 @@ import './FrontNav.scss'
 function Navbar () {
   return (
     <nav>
-      <ul>
+      <a href="#" className='logo'>
+        <img src="./logo.png" alt="logo" />
+      </a>
+      <ul className='full-nav'>
         <li><Link to='/'>Home</Link></li>
         <li><Link to='/about'>About</Link></li>
-        <li><Link to='/contact'>Contact Info</Link></li>
+      </ul>
+      <button className='dropdown-toggle'>X</button>
+      <ul className='dropdown-nav'>
+        <li><Link to='/'>Home</Link></li>
+        <li><Link to='/about'>About</Link></li>
       </ul>
     </nav>
   )
