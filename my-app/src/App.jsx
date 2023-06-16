@@ -3,7 +3,8 @@ import { Routes, Route } from 'react-router-dom'
 import FrontLayout from './components/FrontLayout/FrontLayout'
 import Home from './components/Home/Home'
 import About from './components/About/About'
-import Contact from './components/Contact/Contact'
+import SignUp from './components/SignUp/SignUp'
+import Login from './components/Login/Login'
 
 function App () {
   return (
@@ -12,6 +13,8 @@ function App () {
         <Route element={<FrontLayout />}>
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
+          <Route path='/signup' element={<SignUp />} />
+          <Route path='/login' element={<Login />} />
         </Route>
       </Routes>
     </>

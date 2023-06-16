@@ -33,6 +33,7 @@ nav {
   li {
     display: inline-block;
     padding: 2rem;
+    font-variant: small-caps;
     background-color: #333;
   }
 
@@ -59,6 +60,7 @@ nav {
 
   img {
     height: 40px;
+    filter: invert(100%);
   }
 }
 
