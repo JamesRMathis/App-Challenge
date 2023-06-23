@@ -5,6 +5,7 @@ import Home from './components/Home/Home'
 import About from './components/About/About'
 import SignUp from './components/SignUp/SignUp'
 import Login from './components/Login/Login'
+import Dashboard from './components/Dashboard/Dashboard'
 
 function App () {
   return (
@@ -16,6 +17,7 @@ function App () {
           <Route path='/signup' element={<SignUp />} />
           <Route path='/login' element={<Login />} />
         </Route>
+        <Route path='/dashboard' element={<Dashboard />} />
       </Routes>
     </>
   )

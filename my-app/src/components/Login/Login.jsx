@@ -1,5 +1,6 @@
 import React from "react"
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth'
+import { getAuth, signInWithEmailAndPassword } from 'firebase/auth'
+import { useNavigate } from 'react-router-dom'
 import app from '../../firebaseApp'
 
 import './Login.scss'
@@ -7,6 +8,7 @@ import './Login.scss'
 function Login () {
     const [email, setEmail] = React.useState('')
     const [password, setPassword] = React.useState('')
+    const navigate = useNavigate()
 
     const handleEmailChange = (e) => {
         setEmail(e.target.value)
@@ -22,9 +24,10 @@ function Login () {
         try {
             const auth = getAuth(app)
             const userCredential = await signInWithEmailAndPassword(auth, email, password)
-            const user = userCredential.user
 
-            alert(`User ${user.email} logged in successfully!`)
+            navigate('/dashboard')
+
+            // alert(`User ${auth.currentUser.email} logged in successfully!`)
         }
         catch (error) {
             const errorCode = error.code
